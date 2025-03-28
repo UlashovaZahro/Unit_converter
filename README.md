@@ -6,8 +6,7 @@ A **Django REST framework (DRF) API** that allows users to convert between diffe
 ✔ RESTful API for **unit conversions** (length, weight, temperature, etc.).  
 ✔ Uses **Django REST framework (DRF)** for easy API handling.  
 ✔ **Scalable and modular structure** following Django best practices.  
-✔ **Supports JSON-based API requests and responses.**  
-✔ Unit testing for API reliability.  
+✔ **Supports JSON-based API requests and responses.**   
 
 ## 📌 Supported Conversions
 ### 📏 Length
