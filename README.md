@@ -1,15 +1,119 @@
-# Unit Converter  
-A Python-based unit conversion tool with both CLI and GUI interfaces.
+# 🌐 Unit Converter API (Django)
 
-## Overview  
-The **Unit Converter** is a Python application that allows users to convert between various measurement units, including length, weight, and temperature.  
-It features both a command-line interface (CLI) and a graphical user interface (GUI) for ease of use.
+A **Django REST framework (DRF) API** that allows users to convert between different measurement units, including **length, weight, and temperature**.
 
+## 🚀 Features
+✔ RESTful API for **unit conversions** (length, weight, temperature, etc.).  
+✔ Uses **Django REST framework (DRF)** for easy API handling.  
+✔ **Scalable and modular structure** following Django best practices.  
+✔ **Supports JSON-based API requests and responses.**  
+✔ Unit testing for API reliability.  
 
-## Features  
-- Convert between different units (length, weight, temperature, etc.).  
-- Simple and user-friendly GUI.  
-- Accurate calculations based on standard conversion formulas. 
+## 📌 Supported Conversions
+### 📏 Length
+- Millimeter (mm), Centimeter (cm), Meter (m), Kilometer (km)  
+- Inch (in), Foot (ft), Yard (yd), Mile (mi)  
+
+### ⚖ Weight
+- Milligram (mg), Gram (g), Kilogram (kg)  
+- Ounce (oz), Pound (lb)  
+
+### 🌡 Temperature
+- Celsius (°C), Fahrenheit (°F), Kelvin (K)  
+
+---
+
+## 🛠 Installation & Setup
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/UlashovaZahro/Unit_converter.git
+cd Unit_converter
+```
+
+### 2️⃣ Create & Activate a Virtual Environment
+```sh
+python -m venv venv  # Create virtual environment
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate  # On Windows
+```
+
+### 4️⃣ Apply Migrations & Run Server
+```sh
+python manage.py migrate
+python manage.py runserver
+```
+
+---
+
+## 🔥 API Endpoints
+### Convert Length
+```http
+POST /api/convert/length/
+```
+#### Request Body (JSON)
+```json
+{
+  "value": 100,
+  "from_unit": "meter",
+  "to_unit": "kilometer"
+}
+```
+#### Response (JSON)
+```json
+{
+  "from_unit": "meter",
+  "to_unit": "kilometer",
+  "value": 100,
+  "convert_type": "Length",
+  "result": 0.1
+}
+```
+
+### Convert Weight
+```http
+POST /api/convert/weight/
+```
+#### Request Body (JSON)
+```json
+{
+  "value": 200,
+  "from_unit": "gram",
+  "to_unit": "kilogram"
+}
+```
+#### Response (JSON)
+```json
+{
+  "from_unit": "gram",
+  "to_unit": "kilogram",
+  "value": 200,
+  "convert_type": "Weight",
+  "result": 0.2
+}
+```
+
+### Convert Temperature
+```http
+POST /api/convert/temperature/
+```
+#### Request Body (JSON)
+```json
+{
+  "value": 32,
+  "from_unit": "fahrenheit",
+  "to_unit": "celsius"
+}
+```
+#### Response (JSON)
+```json
+{
+  "from_unit": "fahrenheit",
+  "to_unit": "celsius",
+  "value": 32,
+  "convert_type": "Temperature",
+  "result": 0
+}
+```
 
 ## Project Roadmap
 
